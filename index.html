@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satria Berkah Kencana - Premium Coconut Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E8B57',
+                        secondary: '#F0E68C',
+                        accent: '#8B4513',
+                        light: '#F5F5F5',
+                        dark: '#2C3E50',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('home.png') no-repeat center center;
+            background-size: cover;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('home.png') no-repeat center center;
+                background-size: cover;
+            }
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .scope-image {
+            height: 120px;
+            object-fit: contain;
+            width: 100%;
+        }
+        
+        .vision-image {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header/Navigation -->
+    <header class="bg-primary text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="bg-secondary rounded-full p-2 mr-3">
+                        <i class="fas fa-leaf text-primary text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold">Satria Berkah Kencana</h1>
+                    <span class="ml-2 text-secondary text-sm hidden md:inline">Perfektion | Lasting Company</span>
+                </div>
+                
+                <nav>
+                    <ul class="hidden md:flex space-x-8">
+                        <li><a href="#home" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition">About</a></li>
+                        <li><a href="#products" class="hover:text-secondary transition">Products</a></li>
+                        <li><a href="#scopeci" class="hover:text-secondary transition">SCOPECI</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                    
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden py-4">
+                <ul class="space-y-3">
+                    <li><a href="#home" class="block py-2 hover:text-secondary transition">Home</a></li>
+                    <li><a href="#about" class="block py-2 hover:text-secondary transition">About</a></li>
+                    <li><a href="#products" class="block py-2 hover:text-secondary transition">Products</a></li>
+                    <li><a href="#scopeci" class="block py-2 hover:text-secondary transition">SCOPECI</a></li>
+                    <li><a href="#contact" class="block py-2 hover:text-secondary transition">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Empowering Agriculture</h2>
+            <p class="text-xl md:text-2xl mb-8">Through Premium Coconut Products</p>
+            <a href="#products" class="bg-secondary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 transition inline-block">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">About Satria Berkah Kencana</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Our Mission</h3>
+                    <p class="text-gray-700 mb-6">Satria Berkah Kencana is dedicated to providing high-quality coconut-based products that empower agricultural practices worldwide. We focus on sustainability, quality, and customer satisfaction.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Our Vision</h3>
+                    <p class="text-gray-700">To become a global leader in coconut commodity trading, known for our premium products and commitment to sustainable agricultural practices.</p>
+                </div>
+                
+                <div class="rounded-lg overflow-hidden shadow-xl">
+                    <img src="vision.png" alt="Our Vision" class="vision-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Our Premium Products</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 - Cocopeat -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="cocopeat.png" alt="Cocopeat" class="product-image">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Cocopeat</h3>
+                        <p class="text-gray-700 mb-4">An excellent growing medium for hydroponics and soil mixtures. Our cocopeat retains moisture and provides ideal aeration for plant roots.</p>
+                        <ul class="text-sm text-gray-600">
+                            <li class="mb-1"><span class="font-semibold">Moisture:</span> 15-20%</li>
+                            <li class="mb-1"><span class="font-semibold">pH:</span> 5.5-6.5</li>
+                            <li><span class="font-semibold">EC:</span> 0.5-1.0 mS/cm</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Product 2 - Cocofiber -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="cocofiber.png" alt="Cocofiber" class="product-image">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Cocofiber</h3>
+                        <p class="text-gray-700 mb-4">A natural fiber extracted from coconut husks. Ideal for erosion control, mattresses, upholstery, and horticultural applications.</p>
+                        <ul class="text-sm text-gray-600">
+                            <li class="mb-1"><span class="font-semibold">Length:</span> 5-30 cm</li>
+                            <li class="mb-1"><span class="font-semibold">Moisture:</span> 12-15%</li>
+                            <li><span class="font-semibold">Impurity:</span> &lt; 5%</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Product 3 - Coconut Briquettes -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="bricket.png" alt="Coconut Briquettes" class="product-image">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Coconut Briquettes</h3>
+                        <p class="text-gray-700 mb-4">High-quality briquettes made from coconut shells, perfect for cooking, heating, and industrial applications.</p>
+                        <ul class="text-sm text-gray-600">
+                            <li class="mb-1"><span class="font-semibold">Fixed Carbon:</span> 75-85%</li>
+                            <li class="mb-1"><span class="font-semibold">Ash:</span> 2-4%</li>
+                            <li><span class="font-semibold">Volatile Matter:</span> 10-15%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCOPECI Section -->
+    <section id="scopeci" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">SCOPECI</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-gray-100 rounded-lg">
+                    <div class="h-32 mx-auto mb-4 flex items-center justify-center">
+                        <img src="cocopeat.png" alt="Cocopeat" class="scope-image">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Cocopeat</h3>
+                    <p class="text-gray-700">Premium quality cocopeat for agricultural and horticultural applications.</p>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg">
+                    <div class="h-32 mx-auto mb-4 flex items-center justify-center">
+                        <img src="cocofiber.png" alt="Cocofiber" class="scope-image">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Cocofiber</h3>
+                    <p class="text-gray-700">Natural coconut fiber for various industrial and agricultural uses.</p>
+                </div>
+                
+                <div class="p-6 bg-gray-100 rounded-lg">
+                    <div class="h-32 mx-auto mb-4 flex items-center justify-center">
+                        <img src="bricket.png" alt="Coconut Briquettes" class="scope-image">
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Coconut Briquettes</h3>
+                    <p class="text-gray-700">High-quality briquettes from coconut shells for multiple applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Get In Touch</h3>
+                    <p class="mb-6">We'd love to hear from you. Reach out to us for inquiries, orders, or collaborations.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-secondary"></i>
+                            <div>
+                                <h4 class="font-semibold">Address</h4>
+                                <p>123 Coconut Street, Agricultural District, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-4 text-secondary"></i>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p>+62 123 456 7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-4 text-secondary"></i>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p>info@satriaberkahkencana.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded text-dark focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded text-dark focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded text-dark focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-secondary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Satria Berkah Kencana</h3>
+                    <p class="text-gray-400">Perfektion | Lasting Company</p>
+                    <p class="text-gray-400 mt-2">Empowering agriculture through premium coconut products.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-secondary transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-secondary transition">About</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-secondary transition">Products</a></li>
+                        <li><a href="#scopeci" class="text-gray-400 hover:text-secondary transition">SCOPECI</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-secondary transition text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Satria Berkah Kencana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
